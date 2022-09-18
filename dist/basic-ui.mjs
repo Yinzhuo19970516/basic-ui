@@ -22,7 +22,7 @@ const props = {
     default: ""
   }
 };
-const MyButton = defineComponent({
+const Button = defineComponent({
   name: "SButton",
   props,
   setup(props2, {
@@ -90,14 +90,15 @@ const JSXButton = defineComponent({
 });
 const entry = {
   install(app) {
-    app.component(MyButton.name, MyButton);
+    app.component(Button.name, Button);
     app.component(SFCButton.name, SFCButton);
     app.component(JSXButton.name, JSXButton);
   }
 };
 export {
   JSXButton,
-  MyButton,
+  Button as MyButton,
   SFCButton,
   entry as default
 };
+//# sourceMappingURL=basic-ui.mjs.map

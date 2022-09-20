@@ -4,7 +4,7 @@
 <img src="https://github.com/smarty-team/smarty-admin/blob/main/assets/logo.jpeg" style="width:20%;" />
 </p>
 
-<h1 align="center">Smarty-Admin-UI</h1>
+<h1 align="center">Basic-UI</h1>
 
 <p align="center">
 五脏俱全的组件库教学模型
@@ -45,12 +45,9 @@ Modern browsers and Internet Explorer 10+.
 
 ## Join Discussion Group
 
-Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in discussion group :
-
-<img alt="Join Discusion Group" src="https://github.com/smarty-team/smarty-admin/blob/main/assets/dingding.jpeg" width="300">
 
 
 ## LICENSE
-[MIT](../../LICENSE)
+[MIT](./LICENSE)
 
-Copyright (c) 2022 - present Ran (Joseph) Xia
+Copyright (c) 2022 - present yz

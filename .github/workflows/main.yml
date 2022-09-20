@@ -44,4 +44,4 @@ jobs:
       - name: Install modules
         run: pnpm install
       - name: Run Lint
-        run: cd packages/smarty-ui-vite && pnpm run build
+        run: pnpm run build

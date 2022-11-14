@@ -1,14 +1,7 @@
-// import { createApp } from "vue";
-// import SButton from "./button";
-// import SFCButton from "./SFCButton.vue";
-// import JSXButton from "./JSXButton";
-// createApp(SFCButton).mount("#app");
-// createApp(SButton).mount("#app");
-
 import { createApp } from "vue/dist/vue.esm-browser";
-import BasicUI from './entry'
+import BasicUI from "./entry";
 createApp({
-    template:`
+  template: `
        <div style="margin-bottom:20px;">
        <SButton color="blue">主要按钮</SButton>
        <SButton color="green">绿色按钮</SButton>
@@ -43,7 +36,7 @@ createApp({
        <SButton color="yellow" round plain icon="message"></SButton>
        <SButton color="red" round plain icon="delete"></SButton>
    </div>
-       `
+       `,
 })
-    .use(BasicUI)
-    .mount("#app");
+  .use(BasicUI)
+  .mount("#app");

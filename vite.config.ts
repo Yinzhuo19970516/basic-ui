@@ -1,41 +1,52 @@
 /// <reference types="vitest" />
-import {defineConfig} from "vite";
+import { defineConfig, UserConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx"
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import { presetUno, presetAttributify, presetIcons } from "unocss";
 import Unocss from "./config/unocss";
 
 // https://vitejs.dev/config/
+
 const rollupOptions = {
+
     external: ["vue", "vue-router"],
     output: {
+        assetFileNames: "[name].[ext]",
+        exports: "named",
         globals: {
             vue: "Vue",
         },
     },
 };
 
-export default defineConfig({
+export const config = {
 
-    plugins: [vue(), vueJsx({}), // 添加UnoCSS插件
-        Unocss()],
-    // 添加库模式配置
-
+    plugins: [
+        vue(),    // 添加JSX插件
+        vueJsx({
+            // options are passed on to @vue/babel-plugin-jsx
+        }),
+        // 添加UnoCSS插件
+        // Unocss({
+        //   presets: [presetUno(), presetAttributify(), presetIcons()],
+        // })
+        Unocss(),
+    ],
     build: {
         rollupOptions,
+        cssCodeSplit: true,
         minify: 'terser', // boolean | 'terser' | 'esbuild'
         sourcemap: true, // 输出单独 source文件
-        brotliSize: true,  // 生成压缩大小报告
+        reportCompressedSize: true,  // 生成压缩大小报告
         lib: {
             entry: "./src/entry.ts",
-            name: "BasicUI",
-            fileName: "basic-ui",
+            name: "SmartyUI",
+            fileName: "smarty-ui",
             // 导出模块格式
-            formats: ['es', "umd","iife"],
+            formats: ["es", "umd", "iife"],
         },
-        cssCodeSplit: true,   // cssCodeSplit 这个选项是为了决定在编译的时候是否要独立输出 css
+        outDir: "./dist",
     },
-
     test: {
         // enable jest-like global test APIs
         globals: true,
@@ -47,4 +58,5 @@ export default defineConfig({
             web: [/.[tj]sx$/]
         }
     }
-});
+} as UserConfig;
+export default defineConfig(config as UserConfig);

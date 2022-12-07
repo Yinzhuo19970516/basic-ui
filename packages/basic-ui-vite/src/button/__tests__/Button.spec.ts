@@ -67,23 +67,23 @@ describe("Button", () => {
       ).toBe(true);
     });
 
-    // test("round:true", () => {
-    //   const wrapper = shallowMount(Button, {
-    //     slots: {
-    //       default: "Button",
-    //     },
-    //     props: {
-    //       round: true,
-    //     },
-    //   });
-    //
-    //   expect(
-    //     wrapper
-    //       .classes()
-    //       .map((v) => v.replace("\n", ""))
-    //       .includes("rounded-full")
-    //   ).toBe(true);
-    // });
+    test("round:true", () => {
+      const wrapper = shallowMount(Button, {
+        slots: {
+          default: "Button",
+        },
+        props: {
+          round: true,
+        },
+      });
+
+      expect(
+        wrapper
+          .classes()
+          .map((v) => v.replace("\n", ""))
+          .includes("rounded-full")
+      ).toBe(true);
+    });
   });
 
   describe("plain", () => {

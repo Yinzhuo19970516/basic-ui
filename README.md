@@ -35,9 +35,6 @@
 
 <img src="https://github.com/smarty-team/smarty-admin/blob/main/assets/demo.gif" style="width:80%;" />
 
-## Quick Start
-希望尽快上手 Smarty-UI，可以浏览 [Getting Started](https://smarty-admin.vercel.app/).
-
 
 ## Browser Support
 
